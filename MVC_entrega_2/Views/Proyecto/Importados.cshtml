@@ -1,0 +1,65 @@
+﻿
+@model IEnumerable<WCF.ProyectoDTO>
+@using Dominio;
+
+<h2>Importación de Proyectos</h2>
+@{
+    if (ViewBag.errorMessage != null)
+    {
+
+        <div class="alert alert-info" role="alert">
+            <p><strong>@ViewBag.errorMessage</strong></p>
+        </div>
+    }
+    else if (ViewBag.feedbackMessage != null)
+    {
+        <div class="alert alert-info" role="alert">
+            <p><strong>@ViewBag.feedbackMessage</strong></p>
+        </div>
+    }
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solicitante.Ci)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @{
+                    string imagePath = @Html.DisplayFor(modelItem => item.Imagen).ToString();
+                    imagePath = imagePath.Replace(" ", "");
+                    <img style="max-width: 150px" src="~/imagenes/@imagePath" />
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Solicitante.Ci)
+            </td>
+            <td>
+                @*                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>

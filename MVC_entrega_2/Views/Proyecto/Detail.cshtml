@@ -1,0 +1,179 @@
+﻿@model MVC_entrega_2.Models.ProyectoBaseModel
+@using Dominio;
+<style>
+    dt, dd {
+        padding: 5px;
+        display: block;
+    }
+</style>
+<div>
+    <h4>Inversión en Proyecto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Solicitante.Ci)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Solicitante.Ci)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaldoRestanteFinanciar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaldoRestanteFinanciar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuotasAPagar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuotasAPagar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TasaInteresSegunCuota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TasaInteresSegunCuota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoCuotaSinInt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoCuotaSinInt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoTotalConIntereses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoTotalConIntereses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoCuotaIntInc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoCuotaIntInc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            @{
+                string imagePath = @Html.DisplayFor(model => model.Imagen).ToString();
+                imagePath = imagePath.Replace(" ", "");
+                <img style="max-width: 150px" src="~/imagenes/@imagePath" />
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPresentacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPresentacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        @if (ViewBag.ProyectoTipo == "P" || ViewBag.ProyectoTipo == "p")
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.ExpertisSolicitante)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ExpertisSolicitante)
+            </dd>
+        }
+        else
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.CantIntegrantes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CantIntegrantes)
+            </dd>
+        }
+    </dl>
+
+    @if (Session["errorInversionId"] != null)
+    {
+        string errorId = @Session["errorInversionId"].ToString();
+        <p class="alert alert-danger"><strong>Error!</strong> El monto no puede sobrepasar su máximo tope como Inversor o el saldo del Proyecto @errorId</p>
+    }
+
+    @{
+        <div class="hidden">
+            <span> CI - @ViewBag.CiInversor</span><br />
+            <span> IdProyecto - @ViewBag.ProyectoId</span><br />
+            <span> Monto max Inversor - @ViewBag.MontoEstipulado</span><br />
+            <span> Saldo restante - @ViewBag.ProyectoSaldoRestante</span><br />
+        </div>
+    }
+
+    @if (ViewBag.ProyectoId != null && ViewBag.CiInversor != null && @Model.Estado != "CERRADO")
+    {
+        <form action="../../Proyecto/Finaciacion" method="post">
+            <div class="form-group">
+                <label>Ingrese Monto para Financiar este proyecto</label>
+                <input class="form-control" type="number" name="MontoAFinanciar" min="1" />
+                <input type="hidden" name="MontoEstipulado" value=@ViewBag.MontoEstipulado />
+                <input type="hidden" name="ProyectoSaldoRestante" value=@ViewBag.ProyectoSaldoRestante />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Enviar Financiación</button>
+            </div>
+        </form>
+    }
+
+</div>

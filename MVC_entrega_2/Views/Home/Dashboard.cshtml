@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Bienvenido/a !</h4>
+    <p>Hola <strong>@ViewBag.usuarioActual.Nombre @ViewBag.usuarioActual.Apellido</strong> !!</p>
+    <small>Rol: @ViewBag.usuarioActual.Rol</small>
+</div>
+@if (ViewBag.errorMessage != null)
+{
+
+    <div class="alert alert-info" role="alert">
+        <p><strong>@ViewBag.errorMessage</strong></p>
+    </div>
+}
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>¿Es tu primera vez?</strong> Elije una de las opciones que aparecen debajo.
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-12">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Buscar Proyectos</h3>
+                @if (@ViewBag.usuarioActual.Rol.ToUpper() == "SOLICITANTE")
+                {
+                    <p>Buscar entre todos los proyectos solicitados bajo tu CI</p>
+                }
+                else
+                {
+                    <p>Buscar todos los proyectos prontos para invertir</p>
+                }
+
+                <p>
+
+                    @Html.ActionLink(
+                        linkText: "Buscar proyectos",
+                        actionName: "Index",
+                        controllerName: "Proyecto",
+                        routeValues: null,
+                        htmlAttributes: new { @class = "btn btn-primary" }
+                    )
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

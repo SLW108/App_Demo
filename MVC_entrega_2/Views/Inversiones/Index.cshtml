@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MVC_entrega_2.Models.FinancionModel>
+
+<h2>Inversiones realizados</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProyectoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.Monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.CuotasAPagar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.MontoCuotaIntInc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.TasaInteresSegunCuota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.Solicitante.Ci)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.Solicitante.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proyectoModel.SaldoRestanteFinanciar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoAFinanciar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaInversion)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(model => item.ProyectoId)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.Tipo)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.Monto)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.CuotasAPagar)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.MontoCuotaIntInc)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.TasaInteresSegunCuota)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.Solicitante.Ci)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.Solicitante.Apellido)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.proyectoModel.SaldoRestanteFinanciar)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.MontoAFinanciar)
+    </td>
+    <td>
+        @Html.DisplayFor(model => item.FechaInversion)
+    </td>
+</tr>
+}
+
+</table>

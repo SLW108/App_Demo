@@ -1,0 +1,14 @@
+13 | Fito en Rosario | Marisa Monte | 999 | 99 | 10 | algo.jpg | 10-10-2020 | RECHAZADO | 6 | P | canto
+14 | Mejorar el consultorio | Cambiar todo | 1200 | 10 | 10 | consultorionuevo.jpg | 10-10-2020 | RECHAZADO | 6 | P | 10 años de bps
+15 | Recital de la SAGA | Toque terrible!! | 20000 | 10 | 10 | recitarl.jpg | 10-10-2020 | RECHAZADO | 8 | P | toques varios
+16 | Clarita compra auto | decime que escucho | 10000 | 10 | 10 | algo.jpg | 11-10-2020 | RECHAZADO | 8 | P | pepe
+17 | Recital de NTVG | Un toque para fanáticos | 10000 | 10 | 10 | ntvg.jpg | 11-10-2020 | APROBADO | 8 | P | experiencia internacional
+18 | Restaurante Diegote | Un homenaje al 10 del fútbol | 40000 | 10 | 10 | restaurante.jpg | 04-10-2019 | APROBADO | 8 | P | 10 años de trayectoria
+18 | NO ENTRA POR ID REPETIDO | no deberia entrar | 1000 | 19 | 10 | 19.jpg | 11-10-2020 | APROBADO | 8 | P | mucha experiencia
+20 | LOCO GATTI | Ayuda para los que necesitan | 5000 | 9 | 10 | solidarias.jpg | 05-10-2020 | APROBADO | 8 | C | 12
+21 | Deberia entrar | COOP | 1999 | 10 | 10 | pepe.jpg | 12-10-2020 | RECHAZADO | 8 | C | 12
+13 | Fito en Rosario | Marisa Monte | 999 | 99 | 10 | algo.jpg | 10-10-2020 | RECHAZADO | 6 | P | canto
+27 | Partido benéfico | Los mejores para un gran partido | 50000 | 10 | 10 | partido.jpg | 11-10-2020 | APROBADO | 6 | P | mucha en estas cosas
+30 | Ollas Solidarias 3333 | Ayuda para los que necesitan | 5000 | 9 | 10 | solidarias.jpg | 05-10-2020 | APROBADO | 8 | C | 12
+34 | Tachos Solidarias | Ayuda para los que necesitan | 5000 | 9 | 10 | solidarias.jpg | 05-10-2020 | APROBADO | 8 | C | 12
+38 | LEGION BUENA VOLUNTAD | Ayuda para los que necesitan | 5000 | 9 | 10 | solidarias.jpg | 05-10-2020 | APROBADO | 6 | P | aportes mensuales

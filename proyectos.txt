@@ -1,0 +1,10 @@
+13 | Fito en Rosario | Marisa Monte | 999 | 99 | 10 | algo.jpg | 10-10-2020 | RECHAZADO | 6 | P | canto
+14 | Mejorar el consultorio | Cambiar todo | 1200 | 10 | 10 | consultorionuevo.jpg | 10-10-2020 | RECHAZADO | 6 | P | 10 años de bps
+15 | Recital de la SAGA | Toque terrible!! | 20000 | 10 | 10 | recitarl.jpg | 10-10-2020 | RECHAZADO | 8 | P | toques varios
+16 | Clarita compra auto | decime que escucho | 10000 | 10 | 10 | algo.jpg | 11-10-2020 | RECHAZADO | 8 | P | pepe
+17 | Recital de NTVG | Un toque de puta madre | 10000 | 10 | 10 | algo.jpg | 11-10-2020 | APROBADO | 8 | P | mucha en estas cosas
+18 | Deberia entrar | LTA | 1000 | 10 | 10 | 10.jpg | 11-10-2020 | APROBADO | 8 | P | alguna
+19 | Entra toda | pppapapapapa | 1000 | 19 | 10 | 19.jpg | 11-10-2020 | APROBADO | 8 | P | asdads
+20 | algo | algo2 | 10 | 9 | 10 | uno.jpg | 12-10-2020 | APROBADO | 8 | C | 0
+21 | Deberia entrar | COOP | 1999 | 10 | 10 | pepe.jpg | 12-10-2020 | RECHAZADO | 8 | C | 12
+13 | Fito en Rosario | Marisa Monte | 999 | 99 | 10 | algo.jpg | 10-10-2020 | RECHAZADO | 6 | P | canto
